@@ -39,7 +39,7 @@ const AppLayoutClient = ({ children }: Props) => {
             <MenuOutlined />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Sekolah Terbuka
+            Pijar
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
