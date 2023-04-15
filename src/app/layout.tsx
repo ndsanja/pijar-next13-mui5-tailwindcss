@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
 import './globals.css';
+import { Metadata } from 'next';
 import MuiContext from '@/context/MuiContext';
 
 export const metadata: Metadata = {
