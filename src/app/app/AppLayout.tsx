@@ -27,7 +27,7 @@ const AppLayoutClient = ({ children }: Props) => {
   const [value, setValue] = useState(0);
   return (
     <>
-      <AppBar position="sticky" color="transparent" elevation={0}>
+      <AppBar position="sticky" className="!bg-white" color="transparent" elevation={0}>
         <Toolbar>
           <IconButton
             size="large"

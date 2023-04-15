@@ -1,4 +1,6 @@
+import AppPageClient from "./AppPage";
+
 const AppPage = () => {
-  return <div>hello app page</div>;
+  return <AppPageClient />
 };
 export default AppPage;
