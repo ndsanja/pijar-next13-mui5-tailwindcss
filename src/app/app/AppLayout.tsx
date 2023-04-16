@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   AppBar,
@@ -8,7 +8,7 @@ import {
   IconButton,
   Toolbar,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 import {
   MenuOutlined,
   CalendarToday,
@@ -16,8 +16,8 @@ import {
   Home,
   Person,
   Search,
-} from "@mui/icons-material";
-import { useState } from "react";
+} from '@mui/icons-material';
+import { useState } from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -27,7 +27,12 @@ const AppLayoutClient = ({ children }: Props) => {
   const [value, setValue] = useState(0);
   return (
     <>
-      <AppBar position="sticky" className="!bg-white" color="transparent" elevation={0}>
+      <AppBar
+        position="sticky"
+        className="!bg-white"
+        color="transparent"
+        elevation={0}
+      >
         <Toolbar>
           <IconButton
             size="large"
@@ -46,7 +51,7 @@ const AppLayoutClient = ({ children }: Props) => {
       </AppBar>
 
       <div className="w-full">{children}</div>
-      
+
       <BottomNavigation
         showLabels
         value={value}
