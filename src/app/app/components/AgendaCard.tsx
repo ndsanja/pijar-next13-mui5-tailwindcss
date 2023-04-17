@@ -6,7 +6,7 @@ const AgendaCard = () => {
     <Card
       elevation={0}
       variant="outlined"
-      className="min-w-[220px] min-h-[220px] p-2"
+      className="min-w-[220px] min-h-[220px] md:min-h-[250px] p-2"
     >
       <div className="flex items-center space-x-2">
         <Avatar
@@ -34,15 +34,15 @@ const AgendaCard = () => {
         </Typography>
       </div>
       <div className="mt-3 flex flex-col">
-        <div className="flex items-end">
-          <CalendarMonth className="!w-[20px]" />
+        <div className="flex items-center">
+          <CalendarMonth className="!w-[16px]" />
           <div className="text-xs ">
             <span className="font-semibold">10.00</span>
             <span className="ml-2 font-light">21 Agustus 2023</span>
           </div>
         </div>
-        <div className="flex items-end">
-          <PinDrop className="!w-[20px]" />
+        <div className="flex items-center">
+          <PinDrop className="!w-[16px]" />
           <div className="text-xs ">
             <span className="font-semibold">(Luring)</span>
             <span className="ml-2 font-light">Laboratorium Bahasa</span>

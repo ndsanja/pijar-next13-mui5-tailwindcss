@@ -14,7 +14,7 @@ import {
 
 const TimelineCard = () => {
   return (
-    <Card>
+    <Card elevation={0} variant="outlined">
       <CardHeader
         avatar={
           <Avatar
