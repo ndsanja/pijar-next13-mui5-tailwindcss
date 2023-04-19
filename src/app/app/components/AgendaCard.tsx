@@ -1,4 +1,8 @@
-import { Alarm, CalendarMonth, PinDrop } from '@mui/icons-material';
+import {
+  AlarmOutlined,
+  CalendarMonthOutlined,
+  PinDropOutlined,
+} from '@mui/icons-material';
 import { Avatar, Card, Typography } from '@mui/material';
 
 const AgendaCard = () => {
@@ -6,7 +10,8 @@ const AgendaCard = () => {
     <Card
       elevation={0}
       variant="outlined"
-      className="min-w-[220px] min-h-[220px] md:min-h-[250px] p-2"
+      sx={{ borderRadius: 0 }}
+      className="min-w-[220px] min-h-[220px] md:min-h-[250px] px-3 md:px-4 py-2"
     >
       <div className="flex items-center space-x-2">
         <Avatar
@@ -35,14 +40,14 @@ const AgendaCard = () => {
       </div>
       <div className="mt-3 flex flex-col">
         <div className="flex items-center">
-          <CalendarMonth className="!w-[16px]" />
+          <CalendarMonthOutlined className="!w-[16px]" />
           <div className="text-xs ">
-            <span className="font-semibold">10.00</span>
+            <span className="font-semibold">10.00 WIB</span>
             <span className="ml-2 font-light">21 Agustus 2023</span>
           </div>
         </div>
         <div className="flex items-center">
-          <PinDrop className="!w-[16px]" />
+          <PinDropOutlined className="!w-[16px]" />
           <div className="text-xs ">
             <span className="font-semibold">(Luring)</span>
             <span className="ml-2 font-light">Laboratorium Bahasa</span>
@@ -52,7 +57,7 @@ const AgendaCard = () => {
           <div className="text-[11px] ">
             <span className="font-light">30 Menit Lagi</span>
           </div>
-          <Alarm className="!w-[16px] ml-2" />
+          <AlarmOutlined className="!w-[16px] ml-2" />
         </div>
       </div>
     </Card>
