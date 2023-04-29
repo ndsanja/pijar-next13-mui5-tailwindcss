@@ -31,7 +31,7 @@ interface Props {
    * You won't need it on your project.
    */
   window?: () => Window;
-  children: React.ReactElement;
+  children: React.ReactNode;
 }
 
 function HideOnScroll(props: Props) {
