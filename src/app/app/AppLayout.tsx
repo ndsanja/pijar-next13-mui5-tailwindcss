@@ -24,9 +24,11 @@ import {
 } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+
 type Props = {
-children : React.ReactNode;
-}
+  children: React.ReactNode;
+};
+
 interface PropsSlide {
   /**
    * Injected by the documentation to work in an iframe.
