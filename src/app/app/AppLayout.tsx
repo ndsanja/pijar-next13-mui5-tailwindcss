@@ -7,16 +7,14 @@ import {
   BottomNavigationAction,
   Button,
   IconButton,
+  Slide,
   Toolbar,
   Typography,
+  useScrollTrigger,
 } from '@mui/material';
 import {
   MenuOutlined,
-  CalendarToday,
   DesktopWindowsOutlined,
-  Home,
-  Person,
-  Search,
   HomeOutlined,
   SchoolOutlined,
   ControlPointOutlined,
@@ -24,16 +22,40 @@ import {
   ChatBubbleOutlineOutlined,
   SearchOutlined,
 } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-type Props = {
-  children: React.ReactNode;
-};
+interface Props {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window?: () => Window;
+  children: React.ReactElement;
+}
 
-const AppLayoutClient = ({ children }: Props) => {
+function HideOnScroll(props: Props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+const AppLayoutClient = (props: Props) => {
+  const router = useRouter();
   const [value, setValue] = useState(0);
   return (
     <>
+      {/* <HideOnScroll {...props}> */}
       <AppBar
         position="sticky"
         className="!bg-white"
@@ -91,8 +113,11 @@ const AppLayoutClient = ({ children }: Props) => {
           </div>
         </Toolbar>
       </AppBar>
+      {/* </HideOnScroll> */}
 
-      <div className="w-full max-w-[1400px] mx-auto">{children}</div>
+      <div className="w-full max-w-[1400px] mx-auto pb-[68px]">
+        {props.children}
+      </div>
 
       <BottomNavigation
         showLabels
@@ -102,8 +127,13 @@ const AppLayoutClient = ({ children }: Props) => {
         }}
         className="!fixed !bottom-0 !left-0 !right-0 md:!hidden"
       >
-        <BottomNavigationAction label="Lobi" icon={<HomeOutlined />} />
         <BottomNavigationAction
+          onClick={() => router.push('/app')}
+          label="Lobi"
+          icon={<HomeOutlined />}
+        />
+        <BottomNavigationAction
+          onClick={() => router.push('/app/elearning')}
           sx={{ whiteSpace: 'nowrap' }}
           label="E-Learning"
           icon={<SchoolOutlined />}
