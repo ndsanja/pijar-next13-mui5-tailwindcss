@@ -24,17 +24,19 @@ import {
 } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-
-interface Props {
+type Props = {
+children : React.ReactNode;
+}
+interface PropsSlide {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window?: () => Window;
+ window?: () => Window;
   children: React.ReactNode;
 }
 
-function HideOnScroll(props: Props) {
+function HideOnScroll(props: PropsSlide) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
