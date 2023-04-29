@@ -1,6 +1,6 @@
-import ElearningPageClient from './ElearningPage';
+import ElearningLayoutClient from './ElearningLayout';
 
 const ElearningPage = () => {
-  return <ElearningPageClient />;
+  return <ElearningLayoutClient />;
 };
 export default ElearningPage;

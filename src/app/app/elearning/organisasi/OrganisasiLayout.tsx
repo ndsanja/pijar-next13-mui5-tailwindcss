@@ -2,9 +2,10 @@
 
 import { Paper, Tab, Tabs } from '@mui/material';
 import { useTheme } from '@emotion/react';
-import ElearningPageClient from './ElearningPage';
 import { useState } from 'react';
-import AppAppBar from '../components/AppAppBar';
+import AppAppBar from '../../components/AppAppBar';
+import OrganisasiPageClient from './OrganisasiPage';
+import OrganisasiAppBar from './components/OrganisasiAppBar';
 
 type Props = {
   children?: React.ReactNode;
@@ -20,7 +21,7 @@ function a11yProps(index: number) {
   };
 }
 
-const ElearningLayoutClient = (props: Props) => {
+const OrganisasiLayoutClient = (props: Props) => {
   const { children } = props;
 
   const theme = useTheme();
@@ -35,22 +36,27 @@ const ElearningLayoutClient = (props: Props) => {
   };
   return (
     <>
-      <AppAppBar />
+      <OrganisasiAppBar />
       <Tabs
         sx={{ backgroundColor: 'white', position: 'sticky', top: '50px' }}
         value={value}
         onChange={handleChange}
         indicatorColor="primary"
         textColor="inherit"
-        variant="fullWidth"
+        variant="scrollable"
+        scrollButtons="auto"
         aria-label="kategory elearning"
       >
-        <Tab label="Organisasi" {...a11yProps(0)} />
+        <Tab label="Info" {...a11yProps(0)} />
         <Tab label="Kelas" {...a11yProps(1)} />
         <Tab label="Materi" {...a11yProps(2)} />
+        <Tab label="Siswa" {...a11yProps(3)} />
+        <Tab label="Guru" {...a11yProps(4)} />
+        <Tab label="Wali" {...a11yProps(5)} />
+        <Tab label="Jadwal" {...a11yProps(6)} />
       </Tabs>
-      <ElearningPageClient value={value} />
+      <OrganisasiPageClient value={value} />
     </>
   );
 };
-export default ElearningLayoutClient;
+export default OrganisasiLayoutClient;
