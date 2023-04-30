@@ -1,4 +1,4 @@
-import { Roboto, IBM_Plex_Sans, Plus_Jakarta_Sans } from '@next/font/google';
+import { Roboto, IBM_Plex_Sans, Plus_Jakarta_Sans } from 'next/font/google';
 import { createTheme, useTheme } from '@mui/material/styles';
 
 export const roboto = Roboto({

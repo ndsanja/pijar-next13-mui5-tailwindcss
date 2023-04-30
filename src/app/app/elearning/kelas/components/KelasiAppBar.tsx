@@ -20,7 +20,7 @@ import {
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-const OrganisasiAppBar = () => {
+const KelasAppBar = () => {
   const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
   return (
@@ -48,9 +48,17 @@ const OrganisasiAppBar = () => {
         >
           <div className="flex flex-col">
             <Typography variant="h6" component="div" sx={{ mb: 0, pb: 0 }}>
-              SMA Harapan Bangsa
+              XII-IPA 1
             </Typography>
-            <div className="flex items-center space-x-2 absolute top-[28px] w-full"></div>
+            <div className="flex items-center absolute top-[28px] w-full">
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{ fontSize: '10px' }}
+              >
+                SMA Harapan Bangsa
+              </Typography>
+            </div>
           </div>
           {isExpanded ? <ArrowDropUp /> : <ArrowDropDown />}
         </Box>
@@ -97,4 +105,4 @@ const OrganisasiAppBar = () => {
     </AppBar>
   );
 };
-export default OrganisasiAppBar;
+export default KelasAppBar;

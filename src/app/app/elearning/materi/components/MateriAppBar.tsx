@@ -58,7 +58,7 @@ const MateriAppBar = () => {
               >
                 XII - IPA 1
               </Typography>
-              <div className="w-1 h-1 mb-1 bg-black rounded-full" />
+              <div className="w-1 h-1 bg-black rounded-full" />
               <Typography
                 variant="body1"
                 component="div"

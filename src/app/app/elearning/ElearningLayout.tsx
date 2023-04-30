@@ -35,7 +35,6 @@ const ElearningLayoutClient = (props: Props) => {
   };
   return (
     <>
-      <AppAppBar />
       <Tabs
         sx={{ backgroundColor: 'white', position: 'sticky', top: '50px' }}
         value={value}

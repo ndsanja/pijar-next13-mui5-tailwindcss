@@ -47,12 +47,15 @@ const MateriLayoutClient = (props: Props) => {
         aria-label="kategory elearning"
       >
         <Tab label="Info" {...a11yProps(0)} />
-        <Tab label="Kelas" {...a11yProps(1)} />
-        <Tab label="Materi" {...a11yProps(2)} />
-        <Tab label="Siswa" {...a11yProps(3)} />
-        <Tab label="Guru" {...a11yProps(4)} />
-        <Tab label="Wali" {...a11yProps(5)} />
-        <Tab label="Jadwal" {...a11yProps(6)} />
+        <Tab label="Silabus" {...a11yProps(1)} />
+        <Tab label="Modul" {...a11yProps(2)} />
+        <Tab label="Latihan Soal" {...a11yProps(3)} />
+        <Tab label="Kelompok Belajar" {...a11yProps(4)} />
+        <Tab label="Jadwal" {...a11yProps(5)} />
+        <Tab label="Siswa" {...a11yProps(6)} />
+        <Tab label="Guru" {...a11yProps(7)} />
+        <Tab label="Wali" {...a11yProps(8)} />
+        <Tab label="Pengaturan" {...a11yProps(9)} />
       </Tabs>
       <MateriPageClient value={value} />
     </>

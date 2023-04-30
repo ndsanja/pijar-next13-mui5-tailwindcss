@@ -2,6 +2,9 @@
 
 import { Slide, useScrollTrigger } from '@mui/material';
 import AppAppBar from './components/AppAppBar';
+import { usePathname } from 'next/navigation';
+import BottomNavigationComp from './components/BottomNavigation';
+
 type Props = { children: React.ReactNode };
 
 // interface Props {
@@ -30,15 +33,17 @@ type Props = { children: React.ReactNode };
 // }
 
 const AppLayoutClient = (props: Props) => {
+  console.log(usePathname());
+  const path = usePathname();
+
   return (
     <>
       {/* <HideOnScroll {...props}> */}
-      <AppAppBar />
-      {/* </HideOnScroll> */}
+      {(path === '/app' || path === '/app/elearning') && <AppAppBar />}
 
-      <div className="w-full max-w-[1400px] mx-auto pb-[68px]">
-        {props.children}
-      </div>
+      {/* </HideOnScroll> */}
+      {props.children}
+      <BottomNavigationComp />
     </>
   );
 };

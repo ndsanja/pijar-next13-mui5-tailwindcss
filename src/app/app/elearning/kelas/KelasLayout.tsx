@@ -3,9 +3,8 @@
 import { Paper, Tab, Tabs } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { useState } from 'react';
-import AppAppBar from '../../components/AppAppBar';
-import OrganisasiPageClient from './OrganisasiPage';
-import OrganisasiAppBar from './components/OrganisasiAppBar';
+import KelasAppBar from './components/KelasiAppBar';
+import KelasPageClient from './KelasPage';
 
 type Props = {
   children?: React.ReactNode;
@@ -21,7 +20,7 @@ function a11yProps(index: number) {
   };
 }
 
-const OrganisasiLayoutClient = (props: Props) => {
+const KelasLayoutClient = (props: Props) => {
   const { children } = props;
 
   const theme = useTheme();
@@ -36,7 +35,7 @@ const OrganisasiLayoutClient = (props: Props) => {
   };
   return (
     <>
-      <OrganisasiAppBar />
+      <KelasAppBar />
       <Tabs
         sx={{ backgroundColor: 'white', position: 'sticky', top: '50px' }}
         value={value}
@@ -48,16 +47,16 @@ const OrganisasiLayoutClient = (props: Props) => {
         aria-label="kategory elearning"
       >
         <Tab label="Info" {...a11yProps(0)} />
-        <Tab label="Kelas" {...a11yProps(1)} />
-        <Tab label="Materi" {...a11yProps(2)} />
-        <Tab label="Siswa" {...a11yProps(3)} />
-        <Tab label="Guru" {...a11yProps(4)} />
-        <Tab label="Wali" {...a11yProps(5)} />
-        <Tab label="Jadwal" {...a11yProps(6)} />
-        <Tab label="Pengaturan" {...a11yProps(6)} />
+        <Tab label="Materi" {...a11yProps(1)} />
+        <Tab label="Kelompok Belajar" {...a11yProps(2)} />
+        <Tab label="Jadwal" {...a11yProps(3)} />
+        <Tab label="Siswa" {...a11yProps(4)} />
+        <Tab label="Guru" {...a11yProps(5)} />
+        <Tab label="Wali" {...a11yProps(6)} />
+        <Tab label="Pengaturan" {...a11yProps(7)} />
       </Tabs>
-      <OrganisasiPageClient value={value} />
+      <KelasPageClient value={value} />
     </>
   );
 };
-export default OrganisasiLayoutClient;
+export default KelasLayoutClient;
