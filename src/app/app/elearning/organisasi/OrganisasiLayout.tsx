@@ -1,9 +1,8 @@
 'use client';
 
-import { Paper, Tab, Tabs } from '@mui/material';
+import { Tab, Tabs, useScrollTrigger } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { useState } from 'react';
-import AppAppBar from '../../components/AppAppBar';
 import OrganisasiPageClient from './OrganisasiPage';
 import OrganisasiAppBar from './components/OrganisasiAppBar';
 
@@ -23,6 +22,7 @@ function a11yProps(index: number) {
 
 const OrganisasiLayoutClient = (props: Props) => {
   const { children } = props;
+  const trigger = useScrollTrigger();
 
   const theme = useTheme();
   const [value, setValue] = useState(0);
@@ -38,7 +38,12 @@ const OrganisasiLayoutClient = (props: Props) => {
     <>
       <OrganisasiAppBar />
       <Tabs
-        sx={{ backgroundColor: 'white', position: 'sticky', top: '50px' }}
+        sx={{
+          backgroundColor: 'white',
+          position: 'sticky',
+          top: trigger ? '0px' : '50px',
+        }}
+        className="transition-opacity duration-300 delay-200"
         value={value}
         onChange={handleChange}
         indicatorColor="primary"

@@ -22,7 +22,7 @@ import {
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-const OrganisasiAppBar = () => {
+const KelasAppBar = () => {
   const router = useRouter();
   const trigger = useScrollTrigger();
 
@@ -77,8 +77,17 @@ const OrganisasiAppBar = () => {
                     pb: 0,
                   }}
                 >
-                  SMA Harapan Bangsa
+                  XII-IPA 1
                 </Typography>
+                <div className="flex items-center absolute top-[28px] w-full">
+                  <Typography
+                    variant="body1"
+                    component="div"
+                    sx={{ fontSize: '10px' }}
+                  >
+                    SMA Harapan Bangsa
+                  </Typography>
+                </div>
               </Box>
               <ArrowDropDown
                 sx={{ display: isExpanded ? 'none' : 'inline-block' }}
@@ -103,21 +112,54 @@ const OrganisasiAppBar = () => {
               flexDirection: 'column',
               alignItems: 'center',
             }}
+            className="space-y-4"
           >
-            <Avatar sx={{ height: '50px', width: '50px' }}>
-              <Typography>S</Typography>
-            </Avatar>
+            <Box className="flex flex-col items-center justify-center">
+              <Avatar sx={{ height: '50px', width: '50px' }}>
+                <Typography>X</Typography>
+              </Avatar>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  mb: 0,
+                  pb: 0,
+                }}
+              >
+                XII-IPA 1
+              </Typography>
+            </Box>
 
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                mb: 0,
-                pb: 0,
-              }}
-            >
-              SMA Harapan Bangsa
-            </Typography>
+            <Box className="flex flex-col items-center justify-center">
+              <Typography
+                variant="body2"
+                component="div"
+                sx={{
+                  mb: 0,
+                  pb: 0,
+                  fontSize: '10px',
+                }}
+              >
+                Organisasi:
+              </Typography>
+              <Box className="flex items-center space-x-1">
+                <Avatar sx={{ height: '18px', width: '18px' }}>
+                  <Typography sx={{ fontSize: '12px' }}>S</Typography>
+                </Avatar>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    mb: 0,
+                    pb: 0,
+                    fontSize: '12px',
+                  }}
+                >
+                  SMA Harapan Bangsa
+                </Typography>
+              </Box>
+            </Box>
+
             <IconButton
               onClick={() => setIsExpanded(!isExpanded)}
               size="small"
@@ -135,4 +177,4 @@ const OrganisasiAppBar = () => {
     </Slide>
   );
 };
-export default OrganisasiAppBar;
+export default KelasAppBar;

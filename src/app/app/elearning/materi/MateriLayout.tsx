@@ -1,6 +1,6 @@
 'use client';
 
-import { Paper, Tab, Tabs } from '@mui/material';
+import { Paper, Tab, Tabs, useScrollTrigger } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { useState } from 'react';
 import MateriPageClient from './MateriPage';
@@ -22,6 +22,7 @@ function a11yProps(index: number) {
 
 const MateriLayoutClient = (props: Props) => {
   const { children } = props;
+  const trigger = useScrollTrigger();
 
   const theme = useTheme();
   const [value, setValue] = useState(0);
@@ -37,7 +38,11 @@ const MateriLayoutClient = (props: Props) => {
     <>
       <MateriAppBar />
       <Tabs
-        sx={{ backgroundColor: 'white', position: 'sticky', top: '50px' }}
+        sx={{
+          backgroundColor: 'white',
+          position: 'sticky',
+          top: trigger ? '0px' : '50px',
+        }}
         value={value}
         onChange={handleChange}
         indicatorColor="primary"
