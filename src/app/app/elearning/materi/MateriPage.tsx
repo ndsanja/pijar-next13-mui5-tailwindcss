@@ -1,10 +1,11 @@
 'use client';
 
 import { Box, Typography } from '@mui/material';
-import ContentDisplayView from '../components/ContentDisplayView';
-import OrganisasiCard from '../components/OrganisasiCard';
-import KelasCard from '../components/KelasCard.';
-import MateriCard from '../components/MateriCard';
+import Info from './components/Info';
+import TabDisplayView from './components/TabDisplayView';
+import Modul from './components/Modul';
+import Silabus from './components/Silabus';
+import Siswa from './components/Siswa';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -38,39 +39,39 @@ const MateriPageClient = (props: Props) => {
   return (
     <Box sx={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
       <TabPanel value={value} index={0}>
-        <ContentDisplayView>
-          <Typography>organisasi 1</Typography>
-        </ContentDisplayView>
+        <TabDisplayView>
+          <Info />
+        </TabDisplayView>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ContentDisplayView>
-          <Typography>organisasi 2</Typography>
-        </ContentDisplayView>
+        <TabDisplayView>
+          <Silabus />
+        </TabDisplayView>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <ContentDisplayView>
-          <Typography>organisasi 3</Typography>
-        </ContentDisplayView>
+        <TabDisplayView>
+          <Modul />
+        </TabDisplayView>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <ContentDisplayView>
+        <TabDisplayView>
           <Typography>organisasi 4</Typography>
-        </ContentDisplayView>
+        </TabDisplayView>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <ContentDisplayView>
+        <TabDisplayView>
           <Typography>organisasi 5</Typography>
-        </ContentDisplayView>
+        </TabDisplayView>
       </TabPanel>
       <TabPanel value={value} index={5}>
-        <ContentDisplayView>
+        <TabDisplayView>
           <Typography>organisasi 6</Typography>
-        </ContentDisplayView>
+        </TabDisplayView>
       </TabPanel>
       <TabPanel value={value} index={6}>
-        <ContentDisplayView>
-          <Typography>organisasi 7</Typography>
-        </ContentDisplayView>
+        <TabDisplayView>
+          <Siswa />
+        </TabDisplayView>
       </TabPanel>
     </Box>
   );

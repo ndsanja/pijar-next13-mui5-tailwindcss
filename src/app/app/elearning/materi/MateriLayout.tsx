@@ -42,6 +42,7 @@ const MateriLayoutClient = (props: Props) => {
           backgroundColor: 'white',
           position: 'sticky',
           top: trigger ? '0px' : '50px',
+          zIndex: 100,
         }}
         value={value}
         onChange={handleChange}

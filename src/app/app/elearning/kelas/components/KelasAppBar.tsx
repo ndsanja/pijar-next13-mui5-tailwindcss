@@ -143,7 +143,7 @@ const KelasAppBar = () => {
                 Organisasi:
               </Typography>
               <Box className="flex items-center space-x-1">
-                <Avatar sx={{ height: '18px', width: '18px' }}>
+                <Avatar sx={{ height: '24px', width: '24px' }}>
                   <Typography sx={{ fontSize: '12px' }}>S</Typography>
                 </Avatar>
                 <Typography
