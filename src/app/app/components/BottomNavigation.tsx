@@ -6,6 +6,7 @@ import {
   HomeOutlined,
   NotificationsNoneOutlined,
   SchoolOutlined,
+  TravelExploreOutlined,
 } from '@mui/icons-material';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import { useRouter } from 'next/navigation';
@@ -30,12 +31,15 @@ const BottomNavigationComp = () => {
         icon={<HomeOutlined />}
       />
       <BottomNavigationAction
+        label="Explore"
+        icon={<TravelExploreOutlined />}
+      />
+      <BottomNavigationAction
         onClick={() => router.push('/app/elearning')}
         sx={{ whiteSpace: 'nowrap' }}
         label="E-Learning"
         icon={<SchoolOutlined />}
       />
-      <BottomNavigationAction label="Post" icon={<ControlPointOutlined />} />
       <BottomNavigationAction
         label="Studio"
         icon={<DesktopWindowsOutlined />}

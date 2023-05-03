@@ -1,0 +1,43 @@
+import type { Materi } from '../../type';
+
+export const materi: Materi[] = [
+  {
+    id: 'materi1',
+    name: 'Materi 1',
+    admin: ['user1'],
+    divisi: ['divisi1'],
+    pengajar: ['user1', 'user2'],
+    modul: [],
+    silabus: [],
+    siswa: ['user3', 'user4'],
+    wali: ['user5'],
+    alias: '',
+    category: [],
+  },
+  {
+    id: 'materi2',
+    name: 'Materi 2',
+    admin: ['user1'],
+    divisi: ['divisi1'],
+    pengajar: ['user1', 'user2'],
+    modul: [],
+    silabus: [],
+    siswa: ['user3', 'user4'],
+    wali: ['user5'],
+    alias: '',
+    category: [],
+  },
+  {
+    id: 'materi3',
+    name: 'Materi 3',
+    admin: ['user1'],
+    divisi: ['divisi1'],
+    pengajar: ['user1', 'user2'],
+    modul: [],
+    silabus: [],
+    siswa: ['user3', 'user4'],
+    wali: ['user5'],
+    alias: '',
+    category: [],
+  },
+];

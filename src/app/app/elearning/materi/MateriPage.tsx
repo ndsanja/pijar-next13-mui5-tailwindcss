@@ -7,6 +7,8 @@ import Modul from './components/Modul';
 import Silabus from './components/Silabus';
 import Siswa from './components/Siswa';
 
+import { user } from '../../../../store/data/user';
+
 interface TabPanelProps {
   children?: React.ReactNode;
   dir?: string;
@@ -70,7 +72,11 @@ const MateriPageClient = (props: Props) => {
       </TabPanel>
       <TabPanel value={value} index={6}>
         <TabDisplayView>
-          <Siswa />
+          {user?.length ? (
+            user.map((item) => <Siswa key={item.id} user={item} />)
+          ) : (
+            <div></div>
+          )}
         </TabDisplayView>
       </TabPanel>
     </Box>

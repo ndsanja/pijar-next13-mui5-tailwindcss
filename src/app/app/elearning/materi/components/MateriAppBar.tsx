@@ -172,7 +172,7 @@ const MateriAppBar = () => {
                   fontSize: '10px',
                 }}
               >
-                Organisasi:
+                Lembaga:
               </Typography>
               <Box className="flex items-center space-x-1">
                 <Avatar sx={{ height: '20px', width: '20px' }}>
@@ -263,7 +263,7 @@ const MateriAppBar = () => {
                       whiteSpace: 'nowrap',
                     }}
                   >
-                    Maudy Ayundya
+                    Maudy Ayunda
                   </Typography>
                 </Box>
               </Box>

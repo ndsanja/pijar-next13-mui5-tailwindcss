@@ -12,6 +12,7 @@ module.exports = nextConfig;
 //   experimental: {
 //     appDir: true,
 //   },
+
 //   transpilePackages: ['@mui/system', '@mui/material', '@mui/icons-material'],
 //   modularizeImports: {
 //     '@mui/material/?(((\\w*)?/?)*)': {
